@@ -2,18 +2,18 @@
   "groups": [
     {
       "key": "company",
-      "name": "公司与模型",
-      "blurb": "按厂商追踪模型、产品与公司动态"
+      "name": "产品与平台",
+      "blurb": "追踪 AI 产品平台、支付网络与交易基础设施"
     },
     {
       "key": "field",
-      "name": "技术方向",
-      "blurb": "按技术领域深挖：Agent、多模态、具身智能……"
+      "name": "支付与产品机制",
+      "blurb": "按交易、授权、信任、交互和商业模式浏览"
     },
     {
       "key": "genre",
-      "name": "内容形态",
-      "blurb": "按内容类型浏览：论文、教程、观点、政策……"
+      "name": "发布阶段与判断",
+      "blurb": "区分新品、重大更新、早期访问和机制拆解"
     }
   ],
   "topics": [
@@ -22,316 +22,231 @@
       "name": "OpenAI / ChatGPT",
       "group": "company",
       "entityId": "openai",
-      "definition": "OpenAI 的全部动态：GPT 系列模型、ChatGPT 与 Sora 产品、公司战略与人事的持续追踪。"
+      "definition": "OpenAI 的产品与商业化动态，重点观察 Agent 入口、任务执行、授权和交易能力。"
     },
     {
       "slug": "anthropic",
       "name": "Anthropic / Claude",
       "group": "company",
       "entityId": "anthropic",
-      "definition": "Anthropic 的全部动态：Claude 系列模型、Claude Code、安全研究路线与公司进展的持续追踪。"
+      "definition": "Claude 产品、Computer Use、工具调用及其企业授权与安全机制。"
     },
     {
       "slug": "google",
       "name": "Google / Gemini",
       "group": "company",
       "entityId": "google",
-      "aliases": [
-        "DeepMind"
-      ],
-      "definition": "Google 与 DeepMind 的 AI 动态：Gemini 系列、Veo 视频模型、研究成果与产品生态的持续追踪。"
-    },
-    {
-      "slug": "deepseek",
-      "name": "DeepSeek",
-      "group": "company",
-      "entityId": "deepseek",
-      "definition": "DeepSeek（深度求索）的模型发布、开源权重、技术报告与 API 价格变化。"
-    },
-    {
-      "slug": "qwen",
-      "name": "千问 Qwen",
-      "group": "company",
-      "entityId": "qwen",
-      "definition": "阿里千问 Qwen 系列的开源发布与迭代：从旗舰模型到端侧小模型的全谱系动态。"
-    },
-    {
-      "slug": "kimi",
-      "name": "Kimi / 月之暗面",
-      "group": "company",
-      "entityId": "kimi",
-      "definition": "月之暗面 Kimi 系列模型与产品动态：K 系列开源模型、长上下文技术与产品演进的追踪。"
-    },
-    {
-      "slug": "minimax",
-      "name": "MiniMax",
-      "group": "company",
-      "entityId": "minimax",
-      "definition": "MiniMax 的模型与产品动态：M 系列大模型、语音与多模态能力、开源与商业化进展。"
-    },
-    {
-      "slug": "zhipu",
-      "name": "智谱 GLM",
-      "group": "company",
-      "entityId": "zhipu",
-      "definition": "智谱的 GLM 系列模型动态：旗舰开源发布、代码与推理能力迭代、商业化与生态进展的追踪。"
-    },
-    {
-      "slug": "xai",
-      "name": "xAI / Grok",
-      "group": "company",
-      "entityId": "xai",
-      "definition": "马斯克 xAI 与 Grok 系列的全部动态：模型迭代、算力扩张与 X 平台整合的持续追踪。"
+      "definition": "Google 与 Gemini 的 AI 产品、生活服务入口和 Agent 交易生态。"
     },
     {
       "slug": "meta",
-      "name": "Meta / Llama",
+      "name": "Meta AI",
       "group": "company",
       "entityId": "meta",
-      "definition": "Meta 的 AI 动态：Llama 与 Muse 系列模型、超级智能实验室与 Meta AI 产品。"
+      "definition": "Meta AI、智能眼镜、社交入口及其身份、商业和支付相关机制。"
     },
     {
       "slug": "microsoft",
       "name": "Microsoft / Copilot",
       "group": "company",
       "entityId": "microsoft",
-      "definition": "微软的 AI 布局：Copilot 全家桶、Azure AI 基础设施与 OpenAI 合作关系的持续追踪。"
+      "definition": "Copilot、企业 Agent、身份授权和采购工作流。"
     },
     {
-      "slug": "nvidia",
-      "name": "NVIDIA 英伟达",
+      "slug": "amazon",
+      "name": "Amazon / AWS",
       "group": "company",
-      "entityId": "nvidia",
-      "definition": "英伟达的 AI 芯片与生态动态：GPU 新品、CUDA 生态、机器人平台与 AI 算力市场的风向。"
+      "entityId": "amazon",
+      "definition": "Amazon 消费者 AI、Alexa、购物 Agent 和 AWS 的 Agent 商业基础设施。"
     },
     {
-      "slug": "hugging-face",
-      "name": "Hugging Face",
+      "slug": "stripe",
+      "name": "Stripe",
       "group": "company",
-      "entityId": "hugging-face",
-      "definition": "Hugging Face 开源社区动态：热门模型与数据集、排行榜变化与开源生态的晴雨表。"
+      "entityId": "stripe",
+      "definition": "Stripe 面向 Agent 和开发者的收银、账户、支付编排与商业工具。"
+    },
+    {
+      "slug": "paypal",
+      "name": "PayPal",
+      "group": "company",
+      "entityId": "paypal",
+      "definition": "PayPal、Venmo 与 Braintree 的 AI 商业、钱包和授权支付进展。"
+    },
+    {
+      "slug": "visa",
+      "name": "Visa",
+      "group": "company",
+      "entityId": "visa",
+      "definition": "Visa 的 Agent commerce、令牌化支付、身份和风控基础设施。"
+    },
+    {
+      "slug": "mastercard",
+      "name": "Mastercard",
+      "group": "company",
+      "entityId": "mastercard",
+      "definition": "Mastercard 的 Agent 交易、身份、授权和争议处理机制。"
+    },
+    {
+      "slug": "coinbase",
+      "name": "Coinbase / x402",
+      "group": "company",
+      "entityId": "coinbase",
+      "definition": "Coinbase、Base 与 x402 等机器支付、稳定币和链上结算方案。"
+    },
+    {
+      "slug": "shopify",
+      "name": "Shopify",
+      "group": "company",
+      "entityId": "shopify",
+      "definition": "Shopify 的 AI 商家工具、商品发现、Agent 渠道和 Shop Pay 交易体验。"
+    },
+    {
+      "slug": "alipay",
+      "name": "支付宝 / 蚂蚁",
+      "group": "company",
+      "entityId": "alipay",
+      "definition": "支付宝与蚂蚁集团的 AI 支付、委托支付、身份和商户生态进展。"
+    },
+    {
+      "slug": "qwen",
+      "name": "千问 Qwen",
+      "group": "company",
+      "entityId": "qwen",
+      "definition": "千问的 AI 产品、Agent 入口、企业工作流和商业生态。"
+    },
+    {
+      "slug": "kimi",
+      "name": "Kimi / 月之暗面",
+      "group": "company",
+      "entityId": "kimi",
+      "definition": "Kimi 的 AI 产品体验、Agent 执行和商业化机制。"
+    },
+    {
+      "slug": "minimax",
+      "name": "MiniMax",
+      "group": "company",
+      "entityId": "minimax",
+      "definition": "MiniMax 的消费级 AI 产品、交互入口与商业模式。"
     },
     {
       "slug": "cursor",
       "name": "Cursor",
       "group": "company",
       "entityId": "cursor",
-      "definition": "Cursor（Anysphere）的编辑器与编码 Agent 动态：产品迭代、自研模型与定价变化。"
+      "definition": "Cursor 的任务执行、权限确认、定价和开发者产品机制。"
     },
     {
-      "slug": "openrouter",
-      "name": "OpenRouter",
-      "group": "company",
-      "entityId": "openrouter",
-      "definition": "OpenRouter 模型路由平台动态：新模型上架、用量排行与开发者选型的真实市场信号。"
-    },
-    {
-      "slug": "agent",
-      "name": "Agent 智能体",
+      "slug": "ai-payment",
+      "name": "AI 支付",
       "group": "field",
-      "tags": [
-        "Agent"
-      ],
-      "definition": "让模型自主规划、调用工具、完成多步任务的技术方向——从 Claude Code、Manus 到各家 Agent 框架与评测基准的全部动态。"
+      "tags": ["AI支付"],
+      "definition": "AI 直接参与付款、收款、账单、报销、订阅或资金调度的产品与能力。"
     },
     {
-      "slug": "coding",
-      "name": "AI 编码",
+      "slug": "delegated-payment",
+      "name": "委托支付",
       "group": "field",
-      "tags": [
-        "编码"
-      ],
-      "definition": "AI 写代码的一切：编码助手、Vibe Coding、代码模型评测与开发工作流变革。"
+      "tags": ["委托支付"],
+      "definition": "用户授权 AI 代为选择、确认和付款的产品机制，包括额度、范围和撤销。"
     },
     {
-      "slug": "reasoning",
-      "name": "推理能力",
+      "slug": "agent-commerce",
+      "name": "Agent Commerce",
       "group": "field",
-      "tags": [
-        "推理"
-      ],
-      "definition": "模型推理能力的进展：思维链、推理模型、数学与逻辑基准的突破与争议。"
+      "tags": ["Agent Commerce", "Agent交易"],
+      "definition": "Agent 发现商品、比较、协商、下单和履约的完整交易链路。"
     },
     {
-      "slug": "multimodal",
-      "name": "多模态",
+      "slug": "wallets",
+      "name": "钱包与账户",
       "group": "field",
-      "tags": [
-        "多模态"
-      ],
-      "definition": "文本之外的能力：视觉理解、图文混合、音视频输入输出的模型与产品进展。"
+      "tags": ["钱包", "卡与账户"],
+      "definition": "为人或 Agent 提供资金、凭证、卡和账户控制的产品。"
     },
     {
-      "slug": "image-gen",
-      "name": "图像生成",
+      "slug": "checkout",
+      "name": "收银台与支付协议",
       "group": "field",
-      "tags": [
-        "图像生成"
-      ],
-      "definition": "AI 画图的最前线：文生图模型迭代、图像编辑能力与创作工具生态的全部动态。"
+      "tags": ["收银台", "支付协议"],
+      "definition": "面向自然语言、Agent 和机器调用的收银台、支付协议与商家接入方式。"
     },
     {
-      "slug": "video",
-      "name": "AI 视频",
+      "slug": "authorization",
+      "name": "授权与身份",
       "group": "field",
-      "tags": [
-        "视频"
-      ],
-      "definition": "AI 视频生成与理解：文生视频模型、视频编辑工具与影视创作变革的追踪。"
+      "tags": ["授权控制", "身份验证"],
+      "definition": "最小授权、动态限额、身份确认、可撤销委托和操作审计。"
     },
     {
-      "slug": "voice",
-      "name": "语音与音频",
+      "slug": "risk",
+      "name": "风控与合规",
       "group": "field",
-      "tags": [
-        "语音"
-      ],
-      "definition": "AI 语音与音频的进展：语音合成、实时对话、音乐生成与音频理解的模型与产品。"
+      "tags": ["风控反欺诈", "隐私合规", "退款争议"],
+      "definition": "Agent 交易中的诈骗、隐私、监管、退款、纠纷和责任分配。"
     },
     {
-      "slug": "embodied",
-      "name": "具身智能",
+      "slug": "product-interaction",
+      "name": "产品交互与入口",
       "group": "field",
-      "tags": [
-        "具身智能"
-      ],
-      "definition": "AI 走进物理世界：人形机器人、具身基础模型与真实环境操作能力的进展追踪。"
+      "tags": ["产品交互", "硬件入口", "本地优先"],
+      "definition": "能迁移到 AI 支付的交互方式，包括对话、确认卡、硬件、本地处理和可解释回执。"
     },
     {
-      "slug": "on-device",
-      "name": "端侧 AI",
+      "slug": "use-cases",
+      "name": "生活服务与企业采购",
       "group": "field",
-      "tags": [
-        "端侧"
-      ],
-      "definition": "跑在手机、电脑与边缘设备上的 AI：小模型、本地推理与端侧芯片的进展。"
+      "tags": ["生活服务", "企业采购"],
+      "definition": "高频生活服务、差旅、采购、报销等适合验证 AI 支付的任务场景。"
     },
     {
-      "slug": "open-source",
-      "name": "开源生态",
+      "slug": "ecosystem",
+      "name": "开发者生态与商业模式",
       "group": "field",
-      "tags": [
-        "开源生态",
-        "开源/仓库"
-      ],
-      "definition": "开源模型、框架与仓库动态：权重开放、社区项目爆火、开源与闭源的力量消长。"
+      "tags": ["开发者生态", "商业模式"],
+      "definition": "插件、协议、分发、抽佣、订阅和按结果收费等生态玩法。"
     },
     {
-      "slug": "engineering",
-      "name": "部署工程",
-      "group": "field",
-      "tags": [
-        "部署/工程"
-      ],
-      "definition": "把模型跑起来的工程实践：推理优化、显存与成本、Serving 架构与基础设施选型。"
-    },
-    {
-      "slug": "data-training",
-      "name": "数据与训练",
-      "group": "field",
-      "tags": [
-        "数据/训练"
-      ],
-      "definition": "训练侧的门道：数据集构建、合成数据、预训练与后训练方法、算力与训练成本。"
-    },
-    {
-      "slug": "safety",
-      "name": "安全对齐",
-      "group": "field",
-      "tags": [
-        "安全/对齐"
-      ],
-      "definition": "AI 安全与对齐：越狱与防御、模型行为研究、安全评测与治理框架的进展。"
-    },
-    {
-      "slug": "mcp",
-      "name": "MCP 与工具调用",
-      "group": "field",
-      "tags": [
-        "MCP/工具调用"
-      ],
-      "definition": "模型连接外部世界的协议与实践：MCP 生态、function calling、工具链集成的动态。"
-    },
-    {
-      "slug": "model-releases",
-      "name": "模型发布",
+      "slug": "launches",
+      "name": "新品发布",
       "group": "genre",
-      "tags": [
-        "模型发布"
-      ],
-      "definition": "新模型的发布、开源与迭代：大模型厂商的旗舰更新、开源权重放出、性能与价格变化的第一时间记录。"
+      "tags": ["新品发布"],
+      "definition": "过去 24 小时新发布或首次公开、且已经可验证的 AI 产品与应用。"
     },
     {
-      "slug": "product-updates",
-      "name": "产品更新",
+      "slug": "major-updates",
+      "name": "重大创新更新",
       "group": "genre",
-      "tags": [
-        "产品更新"
-      ],
-      "definition": "AI 产品与应用的功能上新、改版与商业化动态——谁家的产品变强了、变贵了、能用了。"
+      "tags": ["重大更新"],
+      "definition": "改变核心体验、目标用户、交易方式或商业模式的重要更新。"
     },
     {
-      "slug": "papers",
-      "name": "论文研究",
+      "slug": "early-access",
+      "name": "公测与早期访问",
       "group": "genre",
-      "tags": [
-        "论文/研究"
-      ],
-      "definition": "值得读的 AI 论文与研究成果：架构创新、训练方法、能力测量与理论进展的精选解读。"
+      "tags": ["公测/早期访问"],
+      "definition": "新近开放申请、公测或早期访问的产品，明确可用地区与门槛。"
     },
     {
-      "slug": "benchmarks",
-      "name": "评测基准",
+      "slug": "payment-infrastructure",
+      "name": "支付基础设施",
       "group": "genre",
-      "tags": [
-        "评测/基准"
-      ],
-      "definition": "模型到底谁强：Benchmark 成绩、评测方法论争议与排行榜变化的持续记录。"
+      "tags": ["支付基础设施"],
+      "definition": "钱包、收银、账户、稳定币、结算、协议和开发工具。"
     },
     {
-      "slug": "tutorials",
-      "name": "教程实践",
+      "slug": "product-insights",
+      "name": "产品机制拆解",
       "group": "genre",
-      "tags": [
-        "教程/实践"
-      ],
-      "definition": "拿来就能用的实操内容：提示词技巧、工作流搭建、工具用法与踩坑经验。"
+      "tags": ["产品洞察", "商业模式", "交互/入口"],
+      "definition": "从实测和案例中拆出可复用机制，同时说明支付化后的风险与边界。"
     },
     {
-      "slug": "opinions",
-      "name": "大佬观点",
+      "slug": "regulation",
+      "name": "政策与监管",
       "group": "genre",
-      "tags": [
-        "大佬观点"
-      ],
-      "definition": "行业关键人物在想什么：创始人访谈、研究者论战、投资人判断的观点集合。"
-    },
-    {
-      "slug": "trends",
-      "name": "现象与趋势",
-      "group": "genre",
-      "tags": [
-        "现象/趋势"
-      ],
-      "definition": "正在发生的行业级变化：使用习惯迁移、能力涌现、社会影响与市场格局的观察。"
-    },
-    {
-      "slug": "industry",
-      "name": "行业动态",
-      "group": "genre",
-      "tags": [
-        "行业动态"
-      ],
-      "definition": "AI 行业的商业脉搏：融资并购、人事变动、合作与竞争、政策与市场信号。"
-    },
-    {
-      "slug": "policy",
-      "name": "政策监管",
-      "group": "genre",
-      "tags": [
-        "政策/监管"
-      ],
-      "definition": "AI 相关政策法规与政府监管动态：立法进展、出口管制与全球治理框架的追踪。"
+      "tags": ["政策/监管"],
+      "definition": "直接影响 AI 代理交易、资金安全、隐私、责任和消费者保护的规则。"
     }
   ]
 }

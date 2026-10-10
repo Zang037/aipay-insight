@@ -1,5 +1,5 @@
 {
-  "$comment": "示范信源：首次启动时导入（scripts/seed.ts），已存在的不会被覆盖。之后在后台“信源”里新建、修改和暂停。字段说明见 docs/customize.md。",
+  "$comment": "AI 支付热点站的首次启动信源。优先一手发布与产品发现，全文展示和转发默认关闭；上线后可在后台继续增删和试抓。",
   "sources": [
     {
       "id": "rss-openai-news",
@@ -7,17 +7,13 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://openai.com/news/rss.xml",
-        "_aihot": {
-          "initialBackfillLimit": 8
-        }
+        "_aihot": { "initialBackfillLimit": 8 }
       },
       "tier": "T1",
       "owner_entity_id": "openai",
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": [
-        "官方"
-      ],
+      "tags": ["官方", "AI产品"],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -27,100 +23,13 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://deepmind.google/blog/rss.xml",
-        "_aihot": {
-          "initialBackfillLimit": 8
-        }
+        "_aihot": { "initialBackfillLimit": 8 }
       },
       "tier": "T1",
       "owner_entity_id": "google",
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": [
-        "官方"
-      ],
-      "site_fulltext": false,
-      "syndicate_fulltext": false
-    },
-    {
-      "id": "rss-google-research",
-      "name": "Google Research",
-      "kind": "rss",
-      "config": {
-        "feedUrl": "https://research.google/blog/rss/",
-        "_aihot": {
-          "initialBackfillLimit": 8
-        }
-      },
-      "tier": "T1",
-      "owner_entity_id": "google",
-      "participation_mode": "editorial",
-      "interval_minutes": 120,
-      "tags": [
-        "官方",
-        "研究"
-      ],
-      "site_fulltext": false,
-      "syndicate_fulltext": false
-    },
-    {
-      "id": "rss-hugging-face",
-      "name": "Hugging Face Blog",
-      "kind": "rss",
-      "config": {
-        "feedUrl": "https://huggingface.co/blog/feed.xml",
-        "_aihot": {
-          "initialBackfillLimit": 8
-        }
-      },
-      "tier": "T1",
-      "owner_entity_id": "hugging-face",
-      "participation_mode": "editorial",
-      "interval_minutes": 120,
-      "tags": [
-        "官方",
-        "开源"
-      ],
-      "site_fulltext": false,
-      "syndicate_fulltext": false
-    },
-    {
-      "id": "rss-microsoft-research",
-      "name": "Microsoft Research",
-      "kind": "rss",
-      "config": {
-        "feedUrl": "https://www.microsoft.com/en-us/research/feed/",
-        "_aihot": {
-          "initialBackfillLimit": 8
-        }
-      },
-      "tier": "T1",
-      "owner_entity_id": "microsoft",
-      "participation_mode": "editorial",
-      "interval_minutes": 120,
-      "tags": [
-        "官方",
-        "研究"
-      ],
-      "site_fulltext": false,
-      "syndicate_fulltext": false
-    },
-    {
-      "id": "rss-nvidia-blog",
-      "name": "NVIDIA Blog",
-      "kind": "rss",
-      "config": {
-        "feedUrl": "https://blogs.nvidia.com/feed/",
-        "_aihot": {
-          "initialBackfillLimit": 8
-        }
-      },
-      "tier": "T1",
-      "owner_entity_id": "nvidia",
-      "participation_mode": "editorial",
-      "interval_minutes": 120,
-      "tags": [
-        "官方"
-      ],
+      "tags": ["官方", "AI产品"],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -130,18 +39,13 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://aws.amazon.com/blogs/machine-learning/feed/",
-        "_aihot": {
-          "initialBackfillLimit": 8
-        }
+        "_aihot": { "initialBackfillLimit": 8 }
       },
       "tier": "T1",
-      "owner_entity_id": null,
+      "owner_entity_id": "amazon",
       "participation_mode": "editorial",
-      "interval_minutes": 120,
-      "tags": [
-        "官方",
-        "教程"
-      ],
+      "interval_minutes": 180,
+      "tags": ["官方", "开发者生态", "企业场景"],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -151,77 +55,42 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://github.blog/ai-and-ml/feed/",
-        "_aihot": {
-          "initialBackfillLimit": 8
-        }
+        "_aihot": { "initialBackfillLimit": 8 }
       },
       "tier": "T1",
-      "owner_entity_id": null,
-      "participation_mode": "editorial",
-      "interval_minutes": 120,
-      "tags": [
-        "官方"
-      ],
-      "site_fulltext": false,
-      "syndicate_fulltext": false
-    },
-    {
-      "id": "rss-mistral",
-      "name": "Mistral AI",
-      "kind": "rss",
-      "config": {
-        "feedUrl": "https://mistral.ai/news/rss",
-        "_aihot": {
-          "initialBackfillLimit": 8
-        }
-      },
-      "tier": "T1",
-      "owner_entity_id": null,
-      "participation_mode": "editorial",
-      "interval_minutes": 120,
-      "tags": [
-        "官方"
-      ],
-      "site_fulltext": false,
-      "syndicate_fulltext": false
-    },
-    {
-      "id": "rss-bair",
-      "name": "Berkeley AI Research",
-      "kind": "rss",
-      "config": {
-        "feedUrl": "https://bair.berkeley.edu/blog/feed.xml",
-        "_aihot": {
-          "initialBackfillLimit": 8
-        }
-      },
-      "tier": "T1",
-      "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": [
-        "研究"
-      ],
+      "tags": ["官方", "开发者生态"],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
     {
-      "id": "rss-the-verge-ai",
-      "name": "The Verge · AI",
+      "id": "rss-product-hunt",
+      "name": "Product Hunt",
       "kind": "rss",
       "config": {
-        "feedUrl": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
-        "_aihot": {
-          "initialBackfillLimit": 8
-        }
+        "feedUrl": "https://www.producthunt.com/feed",
+        "_aihot": { "initialBackfillLimit": 20 }
       },
       "tier": "T2",
-      "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": [
-        "媒体"
-      ],
+      "tags": ["产品发现", "新品"],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-hacker-news-ai",
+      "name": "Hacker News · New AI Products",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://hnrss.org/newest?q=%22AI%22%20OR%20%22agent%22",
+        "_aihot": { "initialBackfillLimit": 20 }
+      },
+      "tier": "T2",
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": ["社区", "产品发现"],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -231,17 +100,27 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://techcrunch.com/category/artificial-intelligence/feed/",
-        "_aihot": {
-          "initialBackfillLimit": 8
-        }
+        "_aihot": { "initialBackfillLimit": 12 }
       },
       "tier": "T2",
-      "owner_entity_id": null,
       "participation_mode": "editorial",
-      "interval_minutes": 60,
-      "tags": [
-        "媒体"
-      ],
+      "interval_minutes": 90,
+      "tags": ["媒体", "AI产品"],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-the-verge-ai",
+      "name": "The Verge · AI",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+        "_aihot": { "initialBackfillLimit": 12 }
+      },
+      "tier": "T2",
+      "participation_mode": "editorial",
+      "interval_minutes": 90,
+      "tags": ["媒体", "消费产品"],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -251,37 +130,12 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://arstechnica.com/ai/feed/",
-        "_aihot": {
-          "initialBackfillLimit": 8
-        }
+        "_aihot": { "initialBackfillLimit": 10 }
       },
       "tier": "T2",
-      "owner_entity_id": null,
-      "participation_mode": "editorial",
-      "interval_minutes": 60,
-      "tags": [
-        "媒体"
-      ],
-      "site_fulltext": false,
-      "syndicate_fulltext": false
-    },
-    {
-      "id": "rss-mit-tech-review-ai",
-      "name": "MIT Technology Review · AI",
-      "kind": "rss",
-      "config": {
-        "feedUrl": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
-        "_aihot": {
-          "initialBackfillLimit": 8
-        }
-      },
-      "tier": "T2",
-      "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": [
-        "媒体"
-      ],
+      "tags": ["媒体", "技术产品"],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -291,17 +145,12 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://the-decoder.com/feed/",
-        "_aihot": {
-          "initialBackfillLimit": 8
-        }
+        "_aihot": { "initialBackfillLimit": 10 }
       },
       "tier": "T2",
-      "owner_entity_id": null,
       "participation_mode": "editorial",
-      "interval_minutes": 60,
-      "tags": [
-        "媒体"
-      ],
+      "interval_minutes": 120,
+      "tags": ["媒体", "AI产品"],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -311,38 +160,12 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://simonwillison.net/atom/everything/",
-        "_aihot": {
-          "initialBackfillLimit": 8
-        }
+        "_aihot": { "initialBackfillLimit": 10 }
       },
       "tier": "T2",
-      "owner_entity_id": null,
-      "participation_mode": "editorial",
-      "interval_minutes": 120,
-      "tags": [
-        "个人"
-      ],
-      "site_fulltext": false,
-      "syndicate_fulltext": false
-    },
-    {
-      "id": "rss-import-ai",
-      "name": "Import AI",
-      "kind": "rss",
-      "config": {
-        "feedUrl": "https://importai.substack.com/feed",
-        "_aihot": {
-          "initialBackfillLimit": 8
-        }
-      },
-      "tier": "T2",
-      "owner_entity_id": null,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": [
-        "个人",
-        "周刊"
-      ],
+      "tags": ["个人", "产品实测", "开发者生态"],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -352,17 +175,170 @@
       "kind": "rss",
       "config": {
         "feedUrl": "https://www.latent.space/feed",
-        "_aihot": {
-          "initialBackfillLimit": 8
-        }
+        "_aihot": { "initialBackfillLimit": 8 }
       },
       "tier": "T2",
-      "owner_entity_id": null,
       "participation_mode": "editorial",
-      "interval_minutes": 180,
-      "tags": [
-        "个人"
-      ],
+      "interval_minutes": 240,
+      "tags": ["个人", "产品洞察", "开发者生态"],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-stripe-dev",
+      "name": "Stripe Developer Blog",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://stripe.dev/blog/feed",
+        "_aihot": { "initialBackfillLimit": 12 }
+      },
+      "tier": "T1",
+      "owner_entity_id": "stripe",
+      "participation_mode": "editorial",
+      "interval_minutes": 90,
+      "tags": ["官方", "AI支付", "Agent Commerce", "支付基础设施"],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-paypal-newsroom",
+      "name": "PayPal Newsroom",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://newsroom.paypal-corp.com/news?pagetemplate=rss",
+        "_aihot": { "initialBackfillLimit": 12 }
+      },
+      "tier": "T1",
+      "owner_entity_id": "paypal",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": ["官方", "AI支付", "钱包", "收银台"],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-shopify-changelog",
+      "name": "Shopify Changelog",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://changelog.shopify.com/feed",
+        "_aihot": { "initialBackfillLimit": 16 }
+      },
+      "tier": "T1",
+      "owner_entity_id": "shopify",
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": ["官方", "Agent Commerce", "商家产品", "收银台"],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-shopify-dev-changelog",
+      "name": "Shopify Developer Changelog",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://shopify.dev/changelog/feed.xml",
+        "_aihot": { "initialBackfillLimit": 16 }
+      },
+      "tier": "T1",
+      "owner_entity_id": "shopify",
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": ["官方", "开发者生态", "Agent Commerce", "支付基础设施"],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-google-ai-blog",
+      "name": "Google · AI",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://blog.google/innovation-and-ai/technology/ai/rss/",
+        "_aihot": { "initialBackfillLimit": 12 }
+      },
+      "tier": "T1",
+      "owner_entity_id": "google",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": ["官方", "AI产品", "产品交互"],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-checkout-blog",
+      "name": "Checkout.com Blog",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.checkout.com/blog/rss.xml",
+        "_aihot": { "initialBackfillLimit": 12 }
+      },
+      "tier": "T1",
+      "owner_entity_id": "checkout",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": ["官方", "支付基础设施", "收银台", "信任风控"],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-plaid-blog",
+      "name": "Plaid Blog",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://plaid.com/blog/rss.xml",
+        "_aihot": { "initialBackfillLimit": 12 }
+      },
+      "tier": "T1",
+      "owner_entity_id": "plaid",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": ["官方", "支付基础设施", "授权控制", "风控反欺诈"],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-cloudflare-blog",
+      "name": "Cloudflare Blog",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://blog.cloudflare.com/rss/",
+        "_aihot": { "initialBackfillLimit": 10 }
+      },
+      "tier": "T1",
+      "owner_entity_id": "cloudflare",
+      "participation_mode": "editorial",
+      "interval_minutes": 120,
+      "tags": ["官方", "AI产品", "身份验证", "开发者生态"],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-payments-dive",
+      "name": "Payments Dive",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.paymentsdive.com/feeds/news/",
+        "_aihot": { "initialBackfillLimit": 16 }
+      },
+      "tier": "T2",
+      "participation_mode": "editorial",
+      "interval_minutes": 90,
+      "tags": ["媒体", "AI支付", "支付基础设施", "信任风控"],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-pymnts",
+      "name": "PYMNTS",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.pymnts.com/feed/",
+        "_aihot": { "initialBackfillLimit": 20 }
+      },
+      "tier": "T2",
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": ["媒体", "AI支付", "Agent Commerce", "金融科技"],
       "site_fulltext": false,
       "syndicate_fulltext": false
     }
